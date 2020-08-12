@@ -14,15 +14,23 @@
             <h1> API <span> Searcher </span></h1>
         </header>
 
+        <div class="warning hide">
+            <p>Por favor, digite um valor no campo de usuário</p>
+        </div>
+
         <div class="search">
             <input type="text" placeholder="Digite o nome do usuário">
 
             <img src="https://image.flaticon.com/icons/svg/733/733609.svg" class="select-img" alt="GT">
 
             <select name="select-app" id="select">
-                <option value="1" selected>Github</option>
+                <option value="default" selected hidden>Github</option>
             </select>
             <button class="search-button">Procurar</button>
+        </div>
+
+        <div class="loading">
+            <img src="https://i.gifer.com/YCZH.gif" class="hide" alt="Loading Gif">
         </div>
 
         <div class="output">
