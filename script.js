@@ -4,6 +4,7 @@ const selectApp = document.querySelector('#select')
 const selectImg = document.querySelector('.select-img')
 
 const warningDiv = document.querySelector('.warning')
+const warningDivP = document.querySelector('.warning p')
 
 const output = document.querySelector('.output-results')
 
@@ -39,11 +40,9 @@ searchButton.addEventListener('click', () => {
     output.innerHTML = '';
 
     if (isInputEmpty()) {
-        warningDiv.classList.toggle('hide')
-
-        setTimeout(() => {
-            warningDiv.classList.toggle('hide')
-        }, 2000)
+        warningDivP.innerHTML = 'Por favor, digite um valor no campo de usuário'
+        renderError(warningDiv, 'hide')
+        
     } else {
         // Pegar o campo selecionado do select e mandar como parâmetro
         requestFromApi(selectApp.value)
@@ -88,14 +87,9 @@ function getReq(url) {
         .catch(error => {
             loadingGif.classList.toggle('hide')
 
-            const warningDivP = document.querySelector('.warning p')
             warningDivP.innerHTML = error
-            warningDiv.classList.toggle('hide')
-
-            setTimeout(() => {
-                warningDiv.classList.toggle('hide')
-            }, 2000)
-
+            
+            renderError(warningDiv, 'hide')
         }) 
 }
 
@@ -121,8 +115,16 @@ function populateOutput(...params) {
     })
 }
 
-function renderLoading() {
+const renderLoading = () => {
     loadingGif.classList.toggle('hide')
+}
+
+const renderError = (item, classe) => {
+    item.classList.toggle(classe)
+
+    setTimeout(() => {
+        item.classList.toggle(classe)
+    }, 2000)
 }
 
 selectPopulator();
