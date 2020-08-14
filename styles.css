@@ -1,6 +1,12 @@
 :root {
     --github-color: purple;
     --github-img-color: rgb(170, 102, 170);
+
+    --twitter-img-color: rgb(85, 85, 241);
+    --twitter-color: rgb(142, 142, 255);
+
+    --instagram-color: rgb(241, 98, 122);
+    --instagram-img-color: rgb(255, 173, 186);
 }
 
 * {
@@ -10,6 +16,7 @@
 body {
     background-color: #f5f5f5;
 }
+
 
 .hide {
     display: none;
