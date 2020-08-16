@@ -1,0 +1,20 @@
+{
+  "name": "api-searcher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gustavo-zsilva/api-searcher.git",
+  "author": "Gustavo Zonta da Silva <gustavozontadasilva@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "dev": "webpack --mode=development -w"
+  }
+}
