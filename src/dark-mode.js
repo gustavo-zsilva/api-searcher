@@ -1,23 +1,39 @@
-import { darkModeCheckbox } from './variables';
+import { darkModeCheckbox, html, body } from './variables';
 
-console.log('alo');
-
-function getStyle() {
-    window.
-        getComputedStyle(document).
-        getPropertyValue()
+const darkMode = {
+    htmlBg: '#333333',
+    bodyBg: '#333333'
 }
 
-function changeThemes(theme) {
-    document.body.style.backgroundColor = theme
-} 
+const lightMode = {
+    htmlBg: '#f5f5f5',
+    bodyBg: '#f5f5f5'
+}
+
+const textColors = [
+    '#f5f5f5',
+    'black'
+]
+
+const changingElements = [
+    html,
+    body
+]
+
+const changeTheme = (theme, id) => {
+    Object.keys(theme).map((key, index) => {
+        changingElements[index].style.backgroundColor = theme[key];
+    })
+
+    body.style.color = textColors[id];
+}
 
 darkModeCheckbox.addEventListener('change', ({target}) => {
-    target.checked ? changeThemes('black') : changeThemes('#f5f5f5'); 
+    target.checked
+    ? changeTheme(darkMode, 0)
+    : changeTheme(lightMode, 1)
 })
 
-function changeColors() {
-    console.log('WEBPACK ESTÁ LENDO ATÉ AQUI.');
-}
+const successMessage = () => console.warn('WEBPACK LENDO ATÉ AQUI.');
 
-export default changeColors();
+export default successMessage();
