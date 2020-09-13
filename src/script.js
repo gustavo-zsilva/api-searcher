@@ -2,6 +2,7 @@ import { input, searchButton, selectApp, selectImg, warningDiv, warningDivP, out
 import { renderError } from './render-functions';
 import { selectPopulator } from './populator-functions';
 import { getReq } from './request';
+import changeColors from './dark-mode';
 
 export const apis = [
     {

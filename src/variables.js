@@ -10,6 +10,8 @@ export const output = document.querySelector('.output-results')
 
 export let loadingGif = document.querySelector('.loading img')
 
+export const darkModeCheckbox = document.querySelector('input[name=theme]')
+
 export const outputLabels = [
     [
         'Name: ',

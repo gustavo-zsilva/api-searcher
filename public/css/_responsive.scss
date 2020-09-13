@@ -1,0 +1,29 @@
+@media (min-width: 550px) {
+    .container .search {
+        display: flexbox;
+        flex-direction: row;
+        height: 50px;
+
+        select {
+            display: inline-block;
+            border-radius: 0 0.2rem 0.2rem 0;
+            width: 25rem;
+            padding: 0.8rem;
+        }
+
+        img {
+            width: 50px;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            margin: 0 0 0 1rem;
+            border-radius: 0.2rem 0 0 0.2rem;
+        }
+
+        button {
+            padding: 0.8rem;
+            margin: 0 0 0 1rem;
+            width: 13rem;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+* {
+    font-family: 'Archivo', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    max-width: 80.0rem;
+    margin: auto;
+
+    .warning {
+        border: 1px solid red;
+        text-align: center;
+        border-radius: 0.2rem;
+        background-color: rgba(255, 0, 0, 0.171);
+    }
+
+    .loading {
+        display: flex;
+        justify-content: center;
+    }
+}
